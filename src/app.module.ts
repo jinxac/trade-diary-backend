@@ -9,6 +9,7 @@ import ormConfig, { dbConfig } from "./config/orm-config";
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
 import { DiaryModule } from "./diary/diary.module";
+import { StrategyModule } from "./strategy/strategy.module";
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { DiaryModule } from "./diary/diary.module";
     }),
     TypeOrmModule.forRoot(dbConfig),
     DiaryModule,
+    StrategyModule,
   ],
   controllers: [AppController],
   providers: [AppService],

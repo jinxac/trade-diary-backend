@@ -30,13 +30,10 @@ export class UpdateEntryDto {
   @IsNotEmpty()
   emotionAtEntry: string;
 
-  @IsNotEmpty()
   emotionAtExit: string;
 
-  @IsNotEmpty()
   tradeLearnings: string;
 
-  @IsNotEmpty()
   tradeMistakes: string;
 
   tradeRating: number;

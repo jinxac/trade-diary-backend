@@ -3,7 +3,11 @@ import {
   Column,
   Entity,
   CreateDateColumn,
+  OneToOne,
+  JoinColumn,
+  OneToMany,
 } from "typeorm";
+import { Strategy } from "src/strategy/strategy.entity";
 
 @Entity()
 export class Diary {
@@ -28,11 +32,9 @@ export class Diary {
   })
   sellAt: Date;
 
-  @Column({
-    type: "varchar",
-    name: "strategy",
-  })
-  strategy: string;
+  @OneToMany(() => Strategy, (strategy) => strategy.type)
+  @JoinColumn()
+  strategy: Strategy;
 
   @Column({
     type: "numeric",

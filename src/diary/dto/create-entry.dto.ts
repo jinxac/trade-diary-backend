@@ -33,13 +33,10 @@ export class CreateEntryDto {
   @IsNotEmpty()
   emotionAtEntry: string;
 
-  @IsNotEmpty()
   emotionAtExit: string;
 
-  @IsNotEmpty()
   tradeLearnings: string;
 
-  @IsNotEmpty()
   tradeMistakes: string;
 
   tradeRating: number;
